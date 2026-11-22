@@ -1,13 +1,25 @@
-# DataSciencePortfolio
-Hi, my name is Kamal Saltani; welcome to my Data Science repository. This collection of projects highlights my understanding and implementation of key concepts in Machine Learning (ML) and Inferential Statistics. Through the various projects presented here, I aim to demonstrate my technical skills, problem-solving abilities, and ability to apply theoretical knowledge to real-world data science problems.
+# Kamal Saltani | Data Science Portfolio
 
-During my academic journey, I have had the privilege of studying at prestigious institutions such as MIT and Lewis University, where I gained a strong foundation in both theoretical and practical aspects of data science. At MIT, I deepened my knowledge in advanced machine learning techniques, statistical modeling, and algorithm design, while at Lewis University, I focused on real-world applications of data science in diverse domains. This blend of cutting-edge coursework and hands-on experience has provided me with a robust skill set, including:
+I use Python to study how models learn, how to evaluate them, and how to explain their predictions. This collection grew out of my studies at Lewis University and MIT. The notebooks range from applied classification problems to statistical tests implemented from scratch.
 
-- **Advanced Machine Learning**: Techniques in supervised and unsupervised learning, deep learning, and ensemble methods, with hands-on experience implementing models from scratch.
-- **Statistical Inference & Hypothesis Testing**: Applying inferential statistics to analyze data, conduct hypothesis testing, and validate models.
-- **Data Preprocessing & Feature Engineering**: Methods for data cleaning, normalization, handling missing data, and feature selection to ensure high-quality data for analysis.
-- **Optimization & Regularization**: Implementing techniques such as stochastic gradient descent, Lasso, and Ridge regression for efficient model training and overfitting prevention.
-- **Data Visualization & Model Interpretability**: Utilizing visualization tools and techniques like Matplotlib and seaborn for model transparency and interpretation.
-- **Algorithmic Efficiency**: Developing algorithms with an emphasis on time and space complexity, learned through algorithmic problem-solving exercises.
+## Selected notebooks
 
-Despite my limited professional experience, this portfolio serves as a testament to my readiness to contribute to the field of data science by showcasing my ability to apply these skills to real-world problems. It highlights my commitment to continuous learning and best practices, ensuring that I am well-prepared to tackle complex challenges in the industry.
+| Question | What to look for | Notebook |
+| --- | --- | --- |
+| How do you evaluate a fraud classifier when only about 0.17% of transactions are fraudulent? | Compare logistic regression, XGBoost, and random forest baselines. Examine the confusion matrices to see which fraud cases the models miss, then explore oversampling and undersampling. | [Credit card fraud and class imbalance](Projects/Pre-Processing%20Pipeline/samplng-techniques-for-imbalanced-classification.ipynb) |
+| Why did a random forest misclassify a file? | The notebook ranks features by permutation importance, then uses SHAP to examine individual false positives and false negatives in the ClaMP malware dataset. | [Explaining classification errors](Projects/Machine%20Learning%20Explainability/model-explainability-for-classification.ipynb) |
+| How closely does a hand-calculated hypothesis test agree with SciPy? | Follow a one-sample t-test from simulated observations to its test statistic and p-value. Later examples compare groups using the Kruskal–Wallis and Friedman tests. | [Hypothesis tests from scratch](Statistical%20Inference/major-hypothesis-tests-from-scratch.ipynb) |
+| How does combining many trees change a prediction? | Follow the bootstrap sampling and voting logic on Titanic passenger data, then compare the custom ensemble with scikit-learn’s implementation. | [Bagging and random forests](Machine%20Learning%20%28ML%29/SupervisedMachineLearning/Ensembles/bagging-and-random-forest-ensemble-from-scratch.ipynb) |
+
+## Explore by method
+
+- **Supervised learning** — [Logistic regression](Machine%20Learning%20%28ML%29/SupervisedMachineLearning/Generalised%20Linear%20Models%28GLM%29/logistic-regression-from-scratch-v2.ipynb) and [gradient boosting for regression](Machine%20Learning%20%28ML%29/SupervisedMachineLearning/Ensembles/gradient-boosting-from-scratch-regression.ipynb).
+- **Unsupervised learning** — [K-means](Machine%20Learning%20%28ML%29/UnsupervisedMachineLearing/Clustering%20Techniques/k-means-clustering-from-scratch.ipynb), [DBSCAN](Machine%20Learning%20%28ML%29/UnsupervisedMachineLearing/Clustering%20Techniques/dbscan-from-scratch.ipynb), and [principal component analysis](Machine%20Learning%20%28ML%29/UnsupervisedMachineLearing/Dimentionality%20Reduction/pca-from-scratch.ipynb).
+- **Neural networks** — Start with the [multilayer network](Artificial%20Neural%20Network%28ANN%29/artificial-neural-network-from-scratch-l-layer.ipynb), then explore [regularization and dropout](Artificial%20Neural%20Network%28ANN%29/ann-from-scratch-sgd-reg-drop-out.ipynb).
+
+Open a notebook on GitHub to read its code and saved outputs. To rerun the fraud example locally, download the [credit card fraud dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud), update the CSV path in the loading cell, and use a Jupyter environment with the packages imported at the top of the notebook. The hypothesis-testing example generates its own observations.
+
+## Related applied projects
+
+- [Federal Program Performance & Spending Analytics](https://github.com/saltanikamal/federal-program-performance-analytics) uses Python and SQL to trace changes in federal contract obligations and presents the analysis in Streamlit.
+- [Financial Market Analytics Platform](https://github.com/saltanikamal/financial-market-analytics-platform) applies tree ensembles to market time series, evaluates them on later observations, and serves predictions through FastAPI.
